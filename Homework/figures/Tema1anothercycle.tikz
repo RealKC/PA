@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=node] (0) at (-11, 2.5) {A};
+		\node [style=node] (1) at (-6, 7) {B};
+		\node [style=node] (2) at (-6, -1.5) {D};
+		\node [style=node] (3) at (0, 7) {C};
+		\node [style=node] (4) at (0, -1.5) {E};
+		\node [style=node] (5) at (4.5, 2.5) {F};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=arrow] (0) to (1);
+		\draw [style=arrow] (0) to (2);
+		\draw [style=arrow] (1) to (3);
+		\draw [style=arrow] (3) to (2);
+		\draw [style=arrow] (2) to (4);
+		\draw [style=arrow] (3) to (4);
+		\draw [style=arrow, bend left, looseness=1.25] (4) to (2);
+	\end{pgfonlayer}
+\end{tikzpicture}
